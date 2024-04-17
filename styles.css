@@ -1,13 +1,13 @@
-/* General body styles */
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    height: 100%;
 }
 
-/* General header styling for all pages */
 header {
     width: 100%;
     text-align: center;
@@ -20,45 +20,42 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Stack elements vertically */
-}
-
-.download-link {
-    position: absolute;
-    right: 20px;
-    top: 15px; /* Adjust position for better visibility */
-    color: #007BFF;
-    font-size: 16px;
-    text-decoration: none;
-    opacity: 0.8;
-}
-
-.download-link:hover {
-    text-decoration: underline;
-    opacity: 1;
+    flex-direction: column;
 }
 
 nav {
-    width: 100%; /* Ensure nav spans the entire width of the header */
+    width: 100%;
     display: flex;
     justify-content: center;
     padding: 10px 0;
 }
 
-nav a {
+nav a, .download-link {
     color: #007BFF;
-    font-size: 18px; /* Increased font size */
     text-decoration: none;
-    margin: 0 10px; /* Maintain spacing between links */
+}
+
+nav a {
+    font-size: 18px;
+    margin: 0 10px;
     position: relative;
 }
 
+.download-link {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 16px;
+    opacity: 0.8;
+}
 
-nav a:hover {
+/* Link Interactions */
+.download-link:hover, nav a:hover, .splash .links a:hover, .content a:hover {
     text-decoration: underline;
     opacity: 1;
 }
-/* Styles specific to the splash/home page */
+
+/* Splash/Home Page Specific Styles */
 .splash {
     height: 100vh;
     display: flex;
@@ -82,79 +79,46 @@ nav a:hover {
     display: inline-block;
     font-size: 20px;
     padding: 8px;
-    color: #fff; /* Ensure all links are white for visibility */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Text shadow for better readability */
-    margin: 0 0px; /* Adjust spacing around links */
-    text-decoration: none; /* No underline by default */
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .splash .links i {
-    margin-right: 5px; /* Space between icon and text */
+    margin-right: 5px;
 }
 
-.splash nav a:hover, .splash .links a:hover {
-    text-decoration: underline;
-    color: #E8E8E8; /* Light grey for hover to add a subtle change */
-}
-
-
-.splash nav a:not(:last-child):after {
-    color: #fff; /* Ensure all links are white for visibility */
-}
-
-/* Content section styles for bio and resume pages */
-section.content {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
+/* Content Sections for Bio and Resume Pages */
+.content, .pdf-container, .bio-container {
     background-color: white;
+    text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-/* List styling for links within content areas */
+.content, .pdf-container {
+    max-width: 100%;
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
 .content ul {
     list-style: none;
     padding: 0;
 }
 
-.content ul li {
+.content ul li, .content a {
     padding: 10px;
     margin: 5px 0;
+    color: #007BFF;
 }
 
-/* Apply only to links inside content areas, not in the splash */
-.content a {
-    color: #007BFF; /* Standard link color */
-    text-decoration: none;
-}
-
-.content a:hover {
-    text-decoration: underline;
-}
-
-/* Container for PDF to allow more controlled styling */
-section.content {
-    max-width: 100%; /* Use 100% to allow full-width use */
-    width: 95%; /* Set width to 95% of the available space */
-    margin: 20px auto; /* Center the content horizontally */
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-/* Specific container adjustments for the PDF */
+/* PDF Container Styles */
 .pdf-container {
-    height: 90vh;
-    width: 70%; /* Adjusted to a narrower width */
-    margin: 0 auto; /* Centered horizontally */
+    height: 100vh;
+    width: 70%;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    overflow: auto;
 }
 
 .pdf-container iframe {
@@ -163,110 +127,81 @@ section.content {
     border: none;
 }
 
+/* Animation */
+.pdf-container {
+    animation: fadeIn 1s ease-in-out;
+}
 
-/* Subtle fade-in animation for the PDF container */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-.pdf-container {
-    animation: fadeIn 1s ease-in-out;
-}
-
-.bio-container {
-    background-color: white; /* Or any color that fits your design */
-    width: 80%;
-    margin: 40px auto; /* Adds top and bottom margin for spacing */
-    padding: 40px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    border: 1px solid #D0D0D0; /* Subtle border */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Centers the content */
-}
-
-.name-heading {
-    font-size: 36px; /* Larger font size for the name */
-    color: #007BFF; /* Stylish color */
-    margin-bottom: 20px; /* Spacing after the name */
-    text-transform: uppercase; /* UPPERCASE styling */
-    letter-spacing: 1.5px; /* Spacing between letters */
-}
-
-.profile-pic {
-    width: 250px; /* Increased size */
-    height: auto;
-    border-radius: 50%;
-    margin: 0 auto 20px; /* Centered and spaced from the text below */
-    display: block;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
-}
-
-.bio-text {
-    text-align: left; /* Keeps text aligned to the left within the container */
-    margin-top: 20px; /* Additional space above the bio text */
+/* Fixed Elements */
+.fixed-container, .bottomleft {
+    position: fixed;
+    z-index: 1000;
 }
 
 .fixed-container {
-    position: fixed;
     left: 0;
     bottom: 0;
-    z-index: 1000; /* Adjust z-index as needed */
-    width: 100px; /* Or whatever width you need */
-    height: 100px; /* Or whatever height you need */
+    width: 100px;
+    height: 100px;
 }
 
 
-.bottomleft {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-  }
 
-
-  /* unvisited link */
-.bottomleft a:link {
+/* Additional Styles */
+.contact-info {
+    background: #333;
     color: white;
-    text-decoration: none;
-  }
-  
-  /* visited link */
-  .bottomleft a:visited {
-    color: lightgrey;
-    text-decoration: none;
-  }
-  
-  /* mouse over link */
-  .bottomleft a:hover {
-    color: pink;
-    text-decoration: underline;
-  
-  }
-  
-  /* selected link */
-  .bottomleft a:active {
-    color: hotpink;
-    text-decoration: underline;
-  
-  }
-  .contact-info {
-    background: #333; /* Background color for the contact info bar */
-    color: white;
-    padding: 10px 0; /* Adjust padding as needed */
-    text-align: center;
+    padding: 10px 0;
 }
-
-.logo {
-    width: 100px; /* Adjust width as needed */
-    height: auto; /* Keeps the aspect ratio of the image */
-    display: block; /* Centers the logo in the div if needed */
-    margin: 0 auto; /* Center align if needed */
-}
-
 
 .corner-logo {
-    width: 50px; /* Adjust width as needed */
-    height: auto; /* Keeps the aspect ratio of the image */
-    display: block; /* Centers the logo in the div if needed */
-    margin: 0 auto; /* Center align if needed */
+
+    width: 70px;
+
+}
+
+.main-logo {
+    width: 150px;
+}
+.logo, .corner-logo {
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* Bio Page Specific Styles */
+.bio-container {
+    background-color: white;
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid #D0D0D0;
+    border-radius: 10px;
+}
+
+.name-heading {
+    font-size: 36px;
+    color: #007BFF;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.profile-pic {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.bio-text {
+    text-align: left;
+    margin-top: 20px;
 }
