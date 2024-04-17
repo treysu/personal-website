@@ -81,6 +81,8 @@ nav a {
     padding: 8px;
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+
 }
 
 .splash .links i {
@@ -204,4 +206,17 @@ nav a {
 .bio-text {
     text-align: left;
     margin-top: 20px;
+}
+
+.bio-name {
+    font-family: 'Roboto Mono', monospace; /* Roboto Mono font for a techy look */
+    font-size: 3em; /* Larger font size for prominence */
+    color: #007BFF; /* Stylish, eye-catching color */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Subtle shadow for depth */
+}
+
+.highlight {
+    color: #007BFF; /* Choose your preferred color */
+    font-size: 1.2em; /* Larger size; adjust as needed */
+    font-weight: bold; /* Optional: makes the word bold */
 }
