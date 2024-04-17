@@ -1,0 +1,247 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* General header styling for all pages */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #007BFF;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.download-link {
+    position: absolute;
+    right: 20px;
+    top: 15px; /* Adjust position for better visibility */
+    color: #007BFF;
+    font-size: 16px;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+nav {
+    width: 100%; /* Ensure nav spans the entire width of the header */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #007BFF;
+    font-size: 18px; /* Increased font size */
+    text-decoration: none;
+    margin: 0 10px; /* Maintain spacing between links */
+    position: relative;
+}
+
+
+nav a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+/* Styles specific to the splash/home page */
+.splash {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+    color: white;
+}
+
+.splash h1 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.splash p, .splash nav {
+    font-size: 24px;
+}
+
+.splash .links a, .splash nav a {
+    display: inline-block;
+    font-size: 20px;
+    padding: 8px;
+    color: #fff; /* Ensure all links are white for visibility */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Text shadow for better readability */
+    margin: 0 0px; /* Adjust spacing around links */
+    text-decoration: none; /* No underline by default */
+}
+
+.splash .links i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.splash nav a:hover, .splash .links a:hover {
+    text-decoration: underline;
+    color: #E8E8E8; /* Light grey for hover to add a subtle change */
+}
+
+
+.splash nav a:not(:last-child):after {
+    color: #fff; /* Ensure all links are white for visibility */
+}
+
+/* Content section styles for bio and resume pages */
+section.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* List styling for links within content areas */
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content ul li {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Apply only to links inside content areas, not in the splash */
+.content a {
+    color: #007BFF; /* Standard link color */
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* Container for PDF to allow more controlled styling */
+section.content {
+    max-width: 100%; /* Use 100% to allow full-width use */
+    width: 95%; /* Set width to 95% of the available space */
+    margin: 20px auto; /* Center the content horizontally */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Specific container adjustments for the PDF */
+.pdf-container {
+    height: 90vh;
+    width: 70%; /* Adjusted to a narrower width */
+    margin: 0 auto; /* Centered horizontally */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* Subtle fade-in animation for the PDF container */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.pdf-container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.bio-container {
+    background-color: white; /* Or any color that fits your design */
+    width: 80%;
+    margin: 40px auto; /* Adds top and bottom margin for spacing */
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border: 1px solid #D0D0D0; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Centers the content */
+}
+
+.name-heading {
+    font-size: 36px; /* Larger font size for the name */
+    color: #007BFF; /* Stylish color */
+    margin-bottom: 20px; /* Spacing after the name */
+    text-transform: uppercase; /* UPPERCASE styling */
+    letter-spacing: 1.5px; /* Spacing between letters */
+}
+
+.profile-pic {
+    width: 250px; /* Increased size */
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto 20px; /* Centered and spaced from the text below */
+    display: block;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+.bio-text {
+    text-align: left; /* Keeps text aligned to the left within the container */
+    margin-top: 20px; /* Additional space above the bio text */
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+  }
+
+
+  /* unvisited link */
+.bottomleft a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  .bottomleft a:visited {
+    color: lightgrey;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  .bottomleft a:hover {
+    color: pink;
+    text-decoration: underline;
+  
+  }
+  
+  /* selected link */
+  .bottomleft a:active {
+    color: hotpink;
+    text-decoration: underline;
+  
+  }
+  .contact-info {
+    background: #333; /* Background color for the contact info bar */
+    color: white;
+    padding: 10px 0; /* Adjust padding as needed */
+    text-align: center;
+}

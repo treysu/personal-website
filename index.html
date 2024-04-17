@@ -1,97 +1,36 @@
 <!DOCTYPE html>
-<html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
-
-.bgimg {
-  background-image: url('./img/bg.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Verdana", Geneva, sans-serif;
-  font-size: 25px;
-}
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
-
-
-
-/* unvisited link */
-a:link {
-  color: white;
-  text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-  color: lightgrey;
-  text-decoration: none;
-}
-
-/* mouse over link */
-a:hover {
-  color: pink;
-  text-decoration: underline;
-
-}
-
-/* selected link */
-a:active {
-  color: hotpink;
-  text-decoration: underline;
-
-}
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Trey Sullivent - personal portfolio showcasing projects, resume, and professional bio. Connect on GitHub, LinkedIn or via email.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trey Sullivent</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
 <body>
+    <div class="splash">
+        <h1>Trey Sullivent</h1>
 
-<div class="bgimg">
-  <div class="topleft">
-    <!-- <p>Logo</p> -->
-  </div>
-  <div class="middle">
-    <h1>tnevillus yert</h1>
-	<div>
-	<a href="https://github.com/treysullivent/resume/">resume</a>
-	</div>
-	<br>
-    <div>
-        <a href="mailto:treysullivent@gmail.com">email</a> | 
-        <a href="https://github.com/treysullivent">github</a> | 
-        <a href="http://www.linkedin.com/in/treysullivent">linkedin</a>
+        <div class="links">
+            <a href="https://github.com/treysullivent" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/treysullivent" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:your.email@example.com" aria-label="Email Trey Sullivent" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i> Email Me</a>
+
+        </div>
+        <nav>
+            <a href="bio.html">Bio</a>
+            <a>|</a>
+            <a href="resume.html">Resume</a>
+        </nav>
+        
+        <!-- Contact Information -->
+        <div class="bottomleft">
+            <p><a href="http://treysullivent.com" target="_blank" rel="noopener noreferrer">treysullivent.com</a></p>
+          </div>
     </div>
-	</div>
-  <div class="bottomleft">
-    <p><a href="http://yert.xyz">yert.xyz</a></p>
-  </div>
-</div>
-
+    
 </body>
 </html>
