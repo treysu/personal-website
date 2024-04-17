@@ -207,10 +207,20 @@ section.content {
     margin-top: 20px; /* Additional space above the bio text */
 }
 
+.fixed-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1000; /* Adjust z-index as needed */
+    width: 100px; /* Or whatever width you need */
+    height: 100px; /* Or whatever height you need */
+}
+
+
 .bottomleft {
     position: absolute;
-    bottom: 0;
-    left: 16px;
+    bottom: 10px;
+    left: 10px;
   }
 
 
