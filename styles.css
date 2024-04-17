@@ -139,17 +139,15 @@ nav a {
     to { opacity: 1; }
 }
 
-/* Fixed Elements */
-.fixed-container, .bottomleft {
-    position: fixed;
-    z-index: 1000;
-}
+
 
 .fixed-container {
     left: 0;
     bottom: 0;
     width: 100px;
     height: 100px;
+    position: fixed;
+    z-index: 1000;
 }
 
 
