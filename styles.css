@@ -245,3 +245,10 @@ section.content {
     padding: 10px 0; /* Adjust padding as needed */
     text-align: center;
 }
+
+.logo {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Keeps the aspect ratio of the image */
+    display: block; /* Centers the logo in the div if needed */
+    margin: 0 auto; /* Center align if needed */
+}
