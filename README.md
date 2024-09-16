@@ -18,7 +18,7 @@ The website is built with simple HTML/CSS and is easy to set up and run. To view
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/personal-website.git
+   git clone https://github.com/treysullivent/treysullivent.com.git
    ```
 2. Open `index.html` in your preferred web browser.
 
