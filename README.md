@@ -4,7 +4,7 @@ This repository contains the source code for my personal website. The site serve
 
 ## 🔗 Check It Out
 
-This site is hosted at [treysullivent.com](https://treysullivent.com)
+This site is hosted at [treysu.com](https://treysu.com)
 
 ## 📁 Website Content
 
