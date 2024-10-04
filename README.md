@@ -24,4 +24,4 @@ The website is built with simple HTML/CSS and is easy to set up and run. To view
 
 ## 📬 Contact
 
-Feel free to connect with me by going to [treysullivent.com](https://treysullivent.com)
+Feel free to connect with me by going to [treysu.com](https://treysu.com)
